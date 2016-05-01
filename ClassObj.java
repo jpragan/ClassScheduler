@@ -44,16 +44,19 @@ public class ClassObj {
         return room;
     }
 
-    void setName(String name) {this.name = name;}
-    void setInstructor(String instructor){this.instructor = instructor;}
-    void setTime(int time) {this.time = time;}
-    void setCredits(int credits) {this.credits = credits;}
-    void setBuilding(String building){this.building = building;}
-    void setRoom(int room){this.room = room;}
+    public void setName(String name) {this.name = name;}
+    public void setInstructor(String instructor){this.instructor = instructor;}
+    public void setTime(int time) {this.time = time;}
+    public void setCredits(int credits) {this.credits = credits;}
+    public void setBuilding(String building){this.building = building;}
+    public void setRoom(int room){this.room = room;}
 
-    void send_db_string(){
+    public void send_db_string(){
         fm.write_string("this.name" + "," + this.instructor + "," + this.time + "," + this.credits + "," + this.building + "," + this.room);
     }
 
+    public String toString(){
+        return "this.name" + "|" + this.instructor + "|" + this.time + "|" + this.credits + "|" + this.building + "|" + this.room;
+    }
 
 }
